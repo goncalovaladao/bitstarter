@@ -1,9 +1,11 @@
-var express = require('express');
+
+
+Var express = require('express');
 var fs = require('fs');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  var data =6 fs.readFileSync('/home/ubuntu/bitstarter/index.html');
+  var data = fs.readFileSync("/home/ubuntu/bitstarter/index.html");
   var buf  = new Buffer(data);
   response.send(buf.toString());
 });
